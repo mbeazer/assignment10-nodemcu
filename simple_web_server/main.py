@@ -19,6 +19,7 @@ except:
     seconds = 0
 rtc.datetime(utime.localtime(seconds))
 
+
 def time():
     body = """<html>
 <body>
@@ -29,6 +30,7 @@ def time():
 """ % str(rtc.datetime())
 
     return response_template % body
+
 
 def main():
     s = socket.socket()
@@ -56,5 +58,6 @@ def main():
 
         client_s.close()
         print()
+
 
 main()
